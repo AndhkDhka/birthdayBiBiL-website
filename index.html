@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Loading...</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #ffe6f2;
+      font-family: 'Press Start 2P', cursive;
+      color: #ff69b4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .terminal {
+      background-color: #fff0f5;
+      border: 4px solid #ff69b4;
+      padding: 2rem;
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+      border-radius: 10px;
+    }
+
+    .terminal h1 {
+      color: #d63384;
+      font-size: 1.2rem;
+    }
+
+    .progress-bar {
+      margin: 2rem 0;
+      background-color: #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 25px;
+    }
+
+    .progress {
+      height: 100%;
+      background: linear-gradient(90deg, #ff69b4, #ffb6c1);
+      width: 0%;
+      text-align: center;
+      color: #fff;
+      line-height: 25px;
+      font-size: 0.8rem;
+    }
+
+    .message {
+      margin-top: 1rem;
+      color: #d63384;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="terminal">
+    <h1>> WELCOME-SENGG</h1>
+    <p>> READY!</p>
+    <div class="progress-bar">
+      <div class="progress" id="progressBar">0%</div>
+    </div>
+    <div class="message" id="message">LOADING...</div>
+  </div>
+
+  <script>
+    let progress = 0;
+    const progressBar = document.getElementById("progressBar");
+    const message = document.getElementById("message");
+
+    const interval = setInterval(() => {
+      if (progress >= 100) {
+        clearInterval(interval);
+        message.textContent = "SMILE!";
+        setTimeout(() => {
+          window.location.href = "Home.html"; // ganti dengan targetmu
+        }, 1000);
+      } else {
+        progress += 1;
+        progressBar.style.width = progress + "%";
+        progressBar.textContent = progress + "%";
+      }
+    }, 40);
+  </script>
+
+</body>
+</html>

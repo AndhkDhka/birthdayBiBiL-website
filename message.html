@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Message</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to right, #ffe4f0, #fff0f5);
+      color: #d63384;
+      font-family: 'Press Start 2P', monospace;
+      padding: 2rem;
+      text-align: center;
+    }
+    .message-box {
+      border: 3px dashed #ff69b4;
+      padding: 2rem;
+      max-width: 700px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      font-size: 0.8rem;
+      line-height: 2;
+      white-space: pre-line;
+    }
+    .btn {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      font-size: 0.7rem;
+      font-weight: bold;
+      background: #ff69b4;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #d63384;
+    }
+  </style>
+</head>
+<body>
+  <audio id="clickSound" src="click.mp3" preload="auto"></audio>
+  <div class="message-box" id="messageBox"></div>
+  <button class="btn" onclick="playClick(); location.href='gallery.html'">SELANJUTNYA</button>
+
+  <script>
+    const message = `Hi sengggg,
+
+Selamat ulang tahun🥳🎂!
+-NABILA DWI PUTRI ZASKIA-
+Seorang wanita yang berparas cantik, independent, selalu rajin
+Dan tidak lupa manis dan pipi cabi yang selalu baik hati
+Di umur 19 ini semoga kamu menjadi pribadi yang lebih baik
+Terima kasih telah memberi warna dalam dalam hidupku.
+Kamu adalah hal yang terindah yang aku miliki
+Tetap jadi diri sendiri yahhh, yah walaupun sedikit ngeselin😂Tapi agak di kurangi ngambulnya
+Mas tidk akan cape, selalu mengingatkan sayang ketika sayang salah, maaf ya mas tidak bisa ngasih apa apa
+Udah besar yahh semoga kedepan nya whislist yang kamu mau tercapai semua🫰
+dan akan selalu menjadi bagian terindah
+dalam hidup aku
+selamanya. ❤️❤️❤️
+
+Love u always Senggg😘😘.`;
+    let i = 0;
+    function typeMessage() {
+      if (i < message.length) {
+        document.getElementById("messageBox").innerHTML += message.charAt(i);
+        i++;
+        setTimeout(typeMessage, 40);
+      }
+    }
+    function playClick() {
+      const click = document.getElementById('clickSound');
+      click.currentTime = 0;
+      click.play();
+    }
+    typeMessage();
+  </script>
+</body>
+</html>
