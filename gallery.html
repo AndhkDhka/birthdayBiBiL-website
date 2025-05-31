@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to right, #ffccf9, #fceaff);
+      color: #222;
+      font-family: 'Press Start 2P', cursive;
+      padding: 2rem;
+      text-align: center;
+    }
+    h2 {
+      color: #d63384;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .photo {
+      background: #fff0f5;
+      border: 4px dashed #ff69b4;
+      padding: 1rem;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+    .photo:hover {
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+    img, video {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+    }
+    .btn {
+      margin-top: 2rem;
+      background: #ff69b4;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .btn:hover {
+      background: #e83e8c;
+    }
+  </style>
+</head>
+<body>
+  <h2>Galeri Kenangan</h2>
+
+  <div class="gallery">
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_31_Pro.jpg')">
+      <p>1</p>
+      <img src="KDAU0465.JPG" alt="Foto 1">
+      <p>jum'at.11/10/24.18:20</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_23_Pro.jpg')">
+      <p>2</p>
+      <img src="IMG_3551.jpg" alt="Foto 2">
+      <p>Sabtu.19/10/24.20:46</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_23_Pro.jpg')">
+      <p>3</p>
+      <img src="IMG_4362.jpg" alt="Foto 3">
+      <p>Jum'at.25/10/24.17:30</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_11_Pro.jpg')">
+      <p>4</p>
+      <img src="IMG_4405.jpg" alt="Foto 4">
+      <p>Minggu.27/10/24.10:02</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_11_Pro.jpg')">
+      <p>5</p>
+      <img src="IMG_5298.JPG" alt="Foto 4">
+      <p>Selasa.19/11/24.12:46</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_11_Pro.jpg')">
+      <p>6</p>
+      <img src="IMG_5528.jpg" alt="Foto 4">
+      <p>Sabtu.23/11/24.18:36</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_11_Pro.jpg')">
+      <p>7</p>
+      <img src="IMG_5854.jpg" alt="Foto 4">
+      <p>Kamis.05/12/24.22:18</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_11_Pro.jpg')">
+      <p>8</p>
+      <img src="IMG_6019.jpg" alt="Foto 4">
+      <p>Rabu.11/12/24.14:29</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_11_Pro.jpg')">
+      <p>9</p>
+      <img src="IMG_3228.jpg" alt="Foto 4">
+      <p>Sabtu.04/01/25.20:38</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_11_Pro.jpg')">
+      <p>10</p>
+      <img src="IMG_6715.JPG" alt="Foto 4">
+      <p>Minggu.12/01/25.19:36</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_11_Pro.jpg')">
+      <p>11</p>
+      <img src="CJMR1714.JPEG" alt="Foto 4">
+      <p>Selasa.28/01/25.16:23</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_11_Pro.jpg')">
+      <p>12</p>
+      <img src="IMG_8121.jpg" alt="Foto 4">
+      <p>Selasa.25/02/25.11:53</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_11_Pro.jpg')">
+      <p>13</p>
+      <img src="NDYF4319.JPG" alt="Foto 4">
+      <p>Rabu.12/02/25.21:05</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_11_Pro.jpg')">
+      <p>14</p>
+      <img src="IMG_8805.JPG" alt="Foto 4">
+      <p>Rabu.09/04/25.16:31</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_11_Pro.jpg')">
+      <p>15</p>
+      <img src="IMG_8885.jpg" alt="Foto 4">
+      <p>Rabu.16/04/25.10:35</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_11_Pro.jpg')">
+      <p>16</p>
+      <img src="Screenshot 2025-05-31 180524.png" alt="Foto 4">
+      <p>Senin.21/04/25.14:35</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_11_Pro.jpg')">
+      <p>17</p>
+      <img src="IMG_9231.jpg" alt="Foto 4">
+      <p>Minggu.04/05/25.21:45</p>
+    </div>
+    <div class="photo" onclick="showPopup('WIN_20250412_13_14_11_Pro.jpg')">
+      <p>18</p>
+      <img src="IMG_9383.jpg" alt="Foto 4">
+      <p>Selasa.20/05/25.14.46</p>
+    </div>
+    <div class="photo">
+      <p>Clip Dump</p>
+      <video controls>
+        <source src="VTKW6600.MOV" type="video/mp4">
+        Browsermu tidak mendukung tag video.
+      </video>
+      <p>20/04/25</p>
+    </div>
+    <div class="photo">
+      <p>Clip Dump</p>
+      <video controls>
+        <source src="HVMWE1039 (1) (1).mov" type="video/mp4">
+        Browsermu tidak mendukung tag video.
+      </video>
+      <p>20/04/25</p>
+    </div>
+    <div class="photo">
+      <p>Clip Dump</p>
+      <video controls>
+        <source src="RPYVE9173.MOV" type="video/mp4">
+        Browsermu tidak mendukung tag video.
+      </video>
+      <p>20/04/25</p>
+    </div>
+  </div>
+
+  <button class="btn" onclick="location.href='music.html'">Lanjut ke Musik 🎵</button>
+
+  <!-- Popup untuk gambar -->
+  <div id="popup" class="popup" onclick="hidePopup()">
+    <img id="popupImage" src="" alt="Popup Image">
+  </div>
+  <style>
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .popup img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 20px;
+      box-shadow: 0 0 20px #fff;
+    }
+  </style>
+  <script>
+    function showPopup(src) {
+      const popup = document.getElementById('popup');
+      const img = document.getElementById('popupImage');
+      img.src = src;
+      popup.style.display = 'flex';
+    }
+    function hidePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

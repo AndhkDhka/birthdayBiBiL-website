@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Surprise Ending 🎉</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at center, #ffe0f0, #ffc2d1);
+      font-family: 'Press Start 2P', cursive;
+      color: #d63384;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      flex-direction: column;
+      animation: fadeIn 2s ease;
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+    h1 {
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .heart {
+      font-size: 2rem;
+      animation: pulse 1.2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); color: #ff69b4; }
+      50% { transform: scale(1.2); color: #e83e8c; }
+    }
+    .btn {
+      margin-top: 2rem;
+      background: #ff69b4;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 0.8rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #d63384;
+    }
+  </style>
+</head>
+<body>
+  <audio id="clickSound" src="click.mp3" preload="auto"></audio>
+  <h1>Terima kasih sudah melihat semuanya, sayang 💖</h1>
+  <div class="heart">💗💗💗</div>
+  <p style="margin-top: 1.5rem; max-width: 500px; font-size: 0.7rem; line-height: 1.6;">
+    Aku berharap halaman ini bisa membuat kamu tersenyum. <br>
+    Jangan lupa, kamu adalah segalanya buat aku. <br>
+    Let's create more memories together! 🎂🌸
+  </p>
+  <button class="btn" onclick="playClick(); location.href='index.html'">Kembali ke Awal 🕹️</button>
+
+  <script>
+    function playClick() {
+      const click = document.getElementById('clickSound');
+      click.currentTime = 0;
+      click.play();
+    }
+  </script>
+</body>
+</html>
